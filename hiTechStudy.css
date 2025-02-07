@@ -1,0 +1,685 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width:100% ;
+}
+#container{
+    height:100%;
+    width: 80%;
+    background-color:white;
+    margin: auto;
+    padding-top: 30px;
+}
+#nav-box{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav-box ul{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+#nav-box button{
+    height: 50%;
+    width: 100px;
+    border: 2px solid blue;
+    border-radius: 4px;
+    background-color: blue;
+    color: white;
+    transition-property:transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+#nav-box button:hover{
+    transform: scale(1.1);
+    background-color:rgb(5, 5, 128);
+    border: 2px solid rgb(5, 5, 128);
+   
+}
+#nav-box a{
+    text-decoration: none;
+    color: rgb(26, 25, 25);
+}
+
+#nav-box a:hover{
+    color: blue;
+}
+
+
+#nav-box span{
+    color: blue;
+}
+
+@media(max-width:800px){
+    #nav-box a{
+      display: none;
+    }
+    #nav-box button{
+       display: none;
+    }
+
+
+}
+#mainbox{
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+#contentbox{
+    height: 500px;
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    animation-name: slide;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-fill-mode:forwards;
+    opacity:0;
+
+
+}
+
+@keyframes slide{
+    from{
+        opacity:0;
+        transform: translateX(-100%);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+#imgbox{
+    height: 500px;
+    width: 47%;
+    background-color: blue;
+    border-radius: 10px;
+}
+
+
+
+#imgbox img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#heading h1{
+    font-size: 60px;
+}
+#contentbox #intro{
+    position: relative;
+    top:30px;
+}
+#contentbox #intro p{
+    color: rgb(9, 9, 119);
+}
+#contentbox #buttons{
+    margin-bottom: 30px;
+}
+#contentbox #buttons #b1{
+    height: 30px;
+    width: 100px;
+    background-color: blue;
+    color: white;
+    border: 2px solid blue;
+    border-radius: 3px;
+    transition-property:transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+#contentbox #buttons #b2{
+    margin-left: 10px;
+    height: 30px;
+    width: 100px;
+    background-color:black;
+    color: white;
+    border: 2px solid black;
+    border-radius: 3px;
+    transition-property:transform;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+}
+#contentbox #para p{
+    color: rgb(26, 25, 25) ;
+}
+
+#contentbox #buttons #b1:hover{
+    background-color:rgb(5, 5, 128);
+    border: 2px solid rgb(5, 5, 128);
+    transform: scale(1.1);
+}
+
+#contentbox #buttons #b2:hover{
+    background-color:rgb(10, 10, 11);
+    border: 2px solid rgb(10, 10, 11);
+    transform: scale(1.1);
+
+}
+#bestbox{
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    justify-content: center;
+    gap: 20px;
+    animation-name: slide;
+    animation-timing-function: ease;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+@keyframes slide{
+    from{
+        opacity:0;
+        transform: translateX(-100%);
+
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+
+#bestbox h1{
+    font-size: 30px;
+    font-weight: bold;
+}
+#c-box{
+    height: 80px;
+    width: 50%;
+    background-color:lightgrey;
+    color:gray ;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+
+}
+
+
+
+@media(max-width:1000px){
+    
+    #mainbox{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    #contentbox{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+    
+    
+    }
+    #imgbox{
+        width: 100%;
+        
+    }
+    
+    #bestbox{
+        margin-top: 450px;
+    }
+    #c-box{
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        height: 300px;
+        width: 70%;
+    }
+
+    }
+    #c-box img{
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+    }
+    #c-box p{
+        position: relative;
+        bottom: 2px;
+        display: inline;
+    }
+   
+
+    #cardcontainer{
+        background-color: lightgrey;
+        width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+    
+    }
+    .item img{
+        height: 40px;
+        width: 40px;
+     
+
+    }
+    #cardcontainer #info{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+    }
+    #card-grid{
+        width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 1.3rem;
+
+    }
+    #cardcontainer #info h1{
+        font-size: 2.2rem;
+    }
+    #cardcontainer #info p{
+        color: gray;
+        font-size: 1.5rem;
+    }
+
+    .item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: blue;
+        color: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        gap: 1rem;
+    }
+    .card1{
+        background-color: #eb9a0f;
+
+    }
+    .card2{
+        background-color:#d92653;
+    }
+    .card3{
+        background-color: #11c2c8;
+    }
+    .card4{
+        background-color: #48bd11;
+    }
+    .card5{
+        background-color: #36316f;
+    }
+    .card6{
+        background-color: #122b47;
+    }
+#cardinfo{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+@media (max-width:1000px){
+    #cardcontainer{
+        margin-top: 100px;
+    }
+    #card-grid{
+        grid-template-columns: repeat(1,1fr);
+        width: 100%;
+    }
+}
+
+#testimonialbox{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:10px;
+    gap: 10px;
+}
+#testicard{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+#testicard1{
+    height: 250px;
+    width: 300px;
+box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+border: 2px solid gray;
+border-radius: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 15px;
+text-align: center;
+transition-property: all;
+transition-duration: 0.5s;
+transition-timing-function: ease;
+gap: 8px;
+}
+#testicard1:hover{
+    transform: scale(1.05);
+    border: 2px solid blue;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+#testicard2{
+    height: 250px;
+    width: 300px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+   text-align: center;
+    border: 2px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    gap: 8px;
+}
+#testicard2:hover{
+    transform: scale(1.05);
+    border: 2px solid blue;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+#testicard3{
+    height: 250px;
+    width: 300px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    border: 2px solid gray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+    transition-property: all;
+    transition-duration: 0.5s;
+   transition-timing-function: ease;
+   gap: 8px;
+}
+#testicard3:hover{
+    transform: scale(1.05);
+    border: 2px solid blue;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+#testiimg img{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+ #para2{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: grey;
+}
+ #para2 span{
+    font-size: 14px;
+    color: #0d0654;
+    font-weight:600
+}
+ #para1{
+    font-weight:500 ;
+}
+@media(max-width:875px){
+    #testicard{
+        height: 750px;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    #testicard1{
+        width: 100%;
+        gap: 15px;
+    }
+    #testicard2{
+        width: 100%;
+        gap: 15px;
+    }
+    #testicard3{
+        width: 100%;
+        gap: 15px;
+    }
+}
+
+
+#newsletterbox{
+    height: 450px;
+    width: 100%;
+    background-color: #eb9a0f;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#newsimgbox{
+height: 450px;
+width: 50%;
+
+
+}
+#newsimgbox img{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#newscontentbox{
+    height: 450px;
+    width: 50%;
+    background-color:lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+padding-left: 50px;
+    gap: 10px;
+}
+#newscontentbox h1{
+    font-size: 50px;
+    color:blue;
+}
+#newscontentbox #contentlastpara{
+    font-size: 12px;
+}
+#newscontentbox input{
+    height: 30px;
+    width: 200px;
+    border: 2px solid white;
+    border-radius: 3px;
+}
+#newscontentbox button{
+    height: 30px;
+    width: 50px;
+    background-color: blue;
+    border: 2px solid blue;
+    color: white;
+    border-radius: 5px;
+}
+#newscontentbox button:hover{
+    background-color: #3d20fc;
+}
+
+@media(max-width:875px){
+    #newsletterbox{
+        margin-top:650px;
+    }
+    #newsimgbox{
+        display: none;
+    }
+    #newscontentbox{
+        width: 100%;
+    }
+}
+
+#footercontainer{
+    margin-top: 50px;
+    height: 400px;
+    width: 100%;
+    
+}
+
+#footermain1{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+#footermain2{
+    height: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    color: gray;
+   
+}
+#footerbox1{
+    height: 100%;
+    width: 30%;
+    padding-top: 20px;
+
+ 
+}
+#footerbox2{
+    height: 100%;
+    width: 70%;
+
+}
+#footericon{
+        margin-top: 20px;
+}
+#footericon a{
+    width: 50%;
+    font-size: 15px;
+    text-decoration: none;
+    color: gray;
+    margin-left: 15px;
+}
+#footericon i{
+   font-size: 20px;
+}
+
+
+
+#footerbox2{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+#footerbox2 a{
+    text-decoration: none;
+    color: gray;
+   
+}
+#fbox1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+
+#fbox2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+
+#fbox3{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+
+#fbox4{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+
+}
+#footerbox2 span{
+    font-weight: bold;
+    color: black;
+
+}
+
+#footerbox1 span{
+    color: blue;
+   
+}
+
+#footerlogo h1{
+    font-size: 60px;
+  
+}
+
+#footerbox2 p{
+    text-align: center;
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+}
+
+#footerbox2 p:hover{
+    color: black;
+    transform: scale(1.2);
+}
+#footerbox1 p{
+    font-size: 12px;
+}
+@media (max-width:1175px){
+    #footermain1{
+        display: flex;
+        flex-direction: column;
+        border: none;
+        width: 100%;
+        align-items: center;
+        height: 500px;
+        border-bottom: 1px solid black;
+
+    }
+    #footerbox1{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    #footerbox1 #footerpara p{
+        position: relative;
+        top: 70px;
+        right: 300px;
+    }
+    #footericon{
+       display: none;
+    }
+
+   
+}
